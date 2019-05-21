@@ -11,3 +11,8 @@ X,Y = make_moons(n_samples=400, noise=0.05, random_state=0)
 plt.scatter(X[:,0], X[:,1])
 plt.savefig('scatterplot_moon.png')
 
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(X)
+kmeans_results = kmeans.predict(X)
+
+print(kmeans_results)
